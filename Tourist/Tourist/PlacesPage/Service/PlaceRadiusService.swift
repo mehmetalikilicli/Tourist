@@ -24,6 +24,7 @@ class PlaceService {
                     if let servicePlacesArray = answer.features {
                         self.placeArray = servicePlacesArray
                         print(servicePlacesArray)
+                        
                     }
                 } catch {
                     print(error)
