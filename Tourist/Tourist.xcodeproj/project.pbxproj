@@ -15,11 +15,19 @@
 		1759B14F2A39C3EE004F0192 /* PlaceCategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1759B14E2A39C3EE004F0192 /* PlaceCategoryService.swift */; };
 		1759B1562A39EEC3004F0192 /* PlaceCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1759B1542A39EEC3004F0192 /* PlaceCategoryTableViewCell.swift */; };
 		1759B1572A39EEC3004F0192 /* PlaceCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1759B1552A39EEC3004F0192 /* PlaceCategoryTableViewCell.xib */; };
+		1759B15F2A3B0B7B004F0192 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1759B15D2A3B0B7B004F0192 /* PlacesViewController.swift */; };
+		1759B1602A3B0B7B004F0192 /* PlacesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1759B15E2A3B0B7B004F0192 /* PlacesViewController.xib */; };
+		1759B1622A3B1929004F0192 /* PlaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1759B1612A3B1929004F0192 /* PlaceService.swift */; };
+		1759B1642A3B3500004F0192 /* PlaceRadiusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1759B1632A3B3500004F0192 /* PlaceRadiusModel.swift */; };
+		1759B1672A3B4533004F0192 /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1759B1652A3B4533004F0192 /* PlaceTableViewCell.swift */; };
+		1759B1682A3B4533004F0192 /* PlacesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1759B1662A3B4533004F0192 /* PlacesTableViewCell.xib */; };
 		176FF0E82A38857D0035157E /* MainTabberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FF0E72A38857D0035157E /* MainTabberViewController.swift */; };
-		176FF0EB2A3885E20035157E /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FF0E92A3885E20035157E /* PlacesViewController.swift */; };
-		176FF0EC2A3885E20035157E /* PlacesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176FF0EA2A3885E20035157E /* PlacesViewController.xib */; };
+		176FF0EB2A3885E20035157E /* PlacesCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FF0E92A3885E20035157E /* PlacesCategoryViewController.swift */; };
+		176FF0EC2A3885E20035157E /* PlacesCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176FF0EA2A3885E20035157E /* PlacesCategoryViewController.xib */; };
 		176FF0EF2A38861A0035157E /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FF0ED2A38861A0035157E /* WeatherViewController.swift */; };
 		176FF0F02A38861A0035157E /* WeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176FF0EE2A38861A0035157E /* WeatherViewController.xib */; };
+		1793AC962A3F10FC00228950 /* ShowOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1793AC942A3F10FC00228950 /* ShowOnMapViewController.swift */; };
+		1793AC972A3F10FC00228950 /* ShowOnMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1793AC952A3F10FC00228950 /* ShowOnMapViewController.xib */; };
 		17BEFCEB2A389DB600430510 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BEFCEA2A389DB600430510 /* Place.swift */; };
 		17BEFCFD2A38A06900430510 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 17BEFCFC2A38A06900430510 /* Alamofire */; };
 		17BEFCFF2A38BADE00430510 /* PlaceRadiusService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BEFCFE2A38BADE00430510 /* PlaceRadiusService.swift */; };
@@ -39,11 +47,19 @@
 		1759B14E2A39C3EE004F0192 /* PlaceCategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCategoryService.swift; sourceTree = "<group>"; };
 		1759B1542A39EEC3004F0192 /* PlaceCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		1759B1552A39EEC3004F0192 /* PlaceCategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceCategoryTableViewCell.xib; sourceTree = "<group>"; };
+		1759B15D2A3B0B7B004F0192 /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
+		1759B15E2A3B0B7B004F0192 /* PlacesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacesViewController.xib; sourceTree = "<group>"; };
+		1759B1612A3B1929004F0192 /* PlaceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceService.swift; sourceTree = "<group>"; };
+		1759B1632A3B3500004F0192 /* PlaceRadiusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRadiusModel.swift; sourceTree = "<group>"; };
+		1759B1652A3B4533004F0192 /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
+		1759B1662A3B4533004F0192 /* PlacesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacesTableViewCell.xib; sourceTree = "<group>"; };
 		176FF0E72A38857D0035157E /* MainTabberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabberViewController.swift; sourceTree = "<group>"; };
-		176FF0E92A3885E20035157E /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
-		176FF0EA2A3885E20035157E /* PlacesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacesViewController.xib; sourceTree = "<group>"; };
+		176FF0E92A3885E20035157E /* PlacesCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCategoryViewController.swift; sourceTree = "<group>"; };
+		176FF0EA2A3885E20035157E /* PlacesCategoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacesCategoryViewController.xib; sourceTree = "<group>"; };
 		176FF0ED2A38861A0035157E /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		176FF0EE2A38861A0035157E /* WeatherViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherViewController.xib; sourceTree = "<group>"; };
+		1793AC942A3F10FC00228950 /* ShowOnMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowOnMapViewController.swift; sourceTree = "<group>"; };
+		1793AC952A3F10FC00228950 /* ShowOnMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowOnMapViewController.xib; sourceTree = "<group>"; };
 		17BEFCEA2A389DB600430510 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		17BEFCFE2A38BADE00430510 /* PlaceRadiusService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRadiusService.swift; sourceTree = "<group>"; };
 		17BEFD012A38BBCC00430510 /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
@@ -103,10 +119,11 @@
 		1736D7472A389057003DE43D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				176FF0E92A3885E20035157E /* PlacesViewController.swift */,
-				176FF0EA2A3885E20035157E /* PlacesViewController.xib */,
-				1759B1542A39EEC3004F0192 /* PlaceCategoryTableViewCell.swift */,
-				1759B1552A39EEC3004F0192 /* PlaceCategoryTableViewCell.xib */,
+				1759B1582A3B0B37004F0192 /* PlacesCategory */,
+				1759B1592A3B0B45004F0192 /* PlacesCategoryTableViewCell */,
+				1759B15A2A3B0B5A004F0192 /* Places */,
+				1759B1692A3B45F5004F0192 /* PlaceTableViewCell */,
+				1793AC932A3F10EB00228950 /* ShowOnMap */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -116,6 +133,7 @@
 			children = (
 				17BEFCEA2A389DB600430510 /* Place.swift */,
 				1759B14C2A39C21A004F0192 /* PlaceCategoryModel.swift */,
+				1759B1632A3B3500004F0192 /* PlaceRadiusModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -127,6 +145,42 @@
 				1759B14A2A39B2EA004F0192 /* PlaceViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1759B1582A3B0B37004F0192 /* PlacesCategory */ = {
+			isa = PBXGroup;
+			children = (
+				176FF0E92A3885E20035157E /* PlacesCategoryViewController.swift */,
+				176FF0EA2A3885E20035157E /* PlacesCategoryViewController.xib */,
+			);
+			path = PlacesCategory;
+			sourceTree = "<group>";
+		};
+		1759B1592A3B0B45004F0192 /* PlacesCategoryTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				1759B1542A39EEC3004F0192 /* PlaceCategoryTableViewCell.swift */,
+				1759B1552A39EEC3004F0192 /* PlaceCategoryTableViewCell.xib */,
+			);
+			path = PlacesCategoryTableViewCell;
+			sourceTree = "<group>";
+		};
+		1759B15A2A3B0B5A004F0192 /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				1759B15D2A3B0B7B004F0192 /* PlacesViewController.swift */,
+				1759B15E2A3B0B7B004F0192 /* PlacesViewController.xib */,
+			);
+			path = Places;
+			sourceTree = "<group>";
+		};
+		1759B1692A3B45F5004F0192 /* PlaceTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				1759B1652A3B4533004F0192 /* PlaceTableViewCell.swift */,
+				1759B1662A3B4533004F0192 /* PlacesTableViewCell.xib */,
+			);
+			path = PlaceTableViewCell;
 			sourceTree = "<group>";
 		};
 		176FF0E62A3885460035157E /* Core */ = {
@@ -173,9 +227,19 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		1793AC932A3F10EB00228950 /* ShowOnMap */ = {
+			isa = PBXGroup;
+			children = (
+				1793AC942A3F10FC00228950 /* ShowOnMapViewController.swift */,
+				1793AC952A3F10FC00228950 /* ShowOnMapViewController.xib */,
+			);
+			path = ShowOnMap;
+			sourceTree = "<group>";
+		};
 		17BEFCF82A389F5E00430510 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				1759B1612A3B1929004F0192 /* PlaceService.swift */,
 				17BEFCFE2A38BADE00430510 /* PlaceRadiusService.swift */,
 				1759B14E2A39C3EE004F0192 /* PlaceCategoryService.swift */,
 			);
@@ -287,8 +351,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1759B1602A3B0B7B004F0192 /* PlacesViewController.xib in Resources */,
 				176FF0F02A38861A0035157E /* WeatherViewController.xib in Resources */,
-				176FF0EC2A3885E20035157E /* PlacesViewController.xib in Resources */,
+				176FF0EC2A3885E20035157E /* PlacesCategoryViewController.xib in Resources */,
+				1759B1682A3B4533004F0192 /* PlacesTableViewCell.xib in Resources */,
+				1793AC972A3F10FC00228950 /* ShowOnMapViewController.xib in Resources */,
 				17D7A7E62A3731FA00844A00 /* LaunchScreen.storyboard in Resources */,
 				1759B1572A39EEC3004F0192 /* PlaceCategoryTableViewCell.xib in Resources */,
 				1736D7462A388E8C003DE43D /* ProfileViewController.xib in Resources */,
@@ -306,16 +373,21 @@
 				1736D7452A388E8C003DE43D /* ProfileViewController.swift in Sources */,
 				176FF0EF2A38861A0035157E /* WeatherViewController.swift in Sources */,
 				1759B1562A39EEC3004F0192 /* PlaceCategoryTableViewCell.swift in Sources */,
+				1759B1622A3B1929004F0192 /* PlaceService.swift in Sources */,
 				1759B14D2A39C21A004F0192 /* PlaceCategoryModel.swift in Sources */,
+				1759B1672A3B4533004F0192 /* PlaceTableViewCell.swift in Sources */,
 				1759B14F2A39C3EE004F0192 /* PlaceCategoryService.swift in Sources */,
 				176FF0E82A38857D0035157E /* MainTabberViewController.swift in Sources */,
 				17BEFCEB2A389DB600430510 /* Place.swift in Sources */,
 				1759B14B2A39B2EA004F0192 /* PlaceViewModel.swift in Sources */,
 				17BEFCFF2A38BADE00430510 /* PlaceRadiusService.swift in Sources */,
 				1759B1492A39B298004F0192 /* PlaceListViewModel.swift in Sources */,
-				176FF0EB2A3885E20035157E /* PlacesViewController.swift in Sources */,
+				176FF0EB2A3885E20035157E /* PlacesCategoryViewController.swift in Sources */,
 				17D7A7DA2A3731F800844A00 /* AppDelegate.swift in Sources */,
+				1759B15F2A3B0B7B004F0192 /* PlacesViewController.swift in Sources */,
 				17D7A7DC2A3731F800844A00 /* SceneDelegate.swift in Sources */,
+				1793AC962A3F10FC00228950 /* ShowOnMapViewController.swift in Sources */,
+				1759B1642A3B3500004F0192 /* PlaceRadiusModel.swift in Sources */,
 				17BEFD022A38BBCC00430510 /* Urls.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
