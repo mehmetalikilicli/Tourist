@@ -1,3 +1,7 @@
+// This file was generated from JSON Schema using quicktype, do not modify it directly.
+// To parse the JSON, add this file to your project and do:
+//
+//   let place = try? JSONDecoder().decode(Place.self, from: jsonData)
 
 import Foundation
 
@@ -9,140 +13,28 @@ struct Place: Codable {
 
 // MARK: - Feature
 struct Feature: Codable {
-    let type: FeatureType?
+    let type: String?
     let properties: Properties?
     let geometry: Geometry?
-}
-
-// MARK: - Geometry
-struct Geometry: Codable {
-    let type: GeometryType?
-    let coordinates: [Double]?
-}
-
-enum GeometryType: String, Codable {
-    case point = "Point"
 }
 
 // MARK: - Properties
 struct Properties: Codable {
     let name: String?
-    let country: Country?
-    let countryCode: CountryCode?
-    let state: State?
-    let county, city: City?
-    let town: Town?
-    let postcode, suburb, street: String?
+    let country: String?
+    let countryCode: String?
+    let state: String?
+    let county: String?
+    let city, town, postcode, suburb: String?
+    let street: String?
     let lon, lat: Double?
     let formatted, addressLine1, addressLine2: String?
-    let categories: [Category]?
-    let details: [Detail]?
-    let datasource: Datasource?
     let distance: Int?
-    let placeID, quarter, district: String?
-
-    enum CodingKeys: String, CodingKey {
-        case name, country
-        case countryCode
-        case state, county, city, town, postcode, suburb, street, lon, lat, formatted
-        case addressLine1
-        case addressLine2
-        case categories, details, datasource, distance
-        case placeID
-        case quarter, district
-    }
+    let place_id, quarter, district, neighbourhood: String?
 }
 
-enum Category: String, Codable {
-    case commercialHealthAndBeauty = "commercial.health_and_beauty"
-    case commercialHealthAndBeautyPharmacy = "commercial.health_and_beauty.pharmacy"
-    case healthcare = "healthcare"
-    case healthcarePharmacy = "healthcare.pharmacy"
-}
-
-enum City: String, Codable {
-    case beyoğlu = "Beyoğlu"
-    case istanbul = "Istanbul"
-}
-
-enum Country: String, Codable {
-    case turkey = "Turkey"
-}
-
-enum CountryCode: String, Codable {
-    case tr = "tr"
-}
-
-// MARK: - Datasource
-struct Datasource: Codable {
-    let sourcename: Sourcename?
-    let attribution: Attribution?
-    let license: License?
-    let url: String?
-    let raw: Raw?
-}
-
-enum Attribution: String, Codable {
-    case openStreetMapContributors = "© OpenStreetMap contributors"
-}
-
-enum License: String, Codable {
-    case openDatabaseLicence = "Open Database Licence"
-}
-
-// MARK: - Raw
-struct Raw: Codable {
-    let name, phone: String?
-    let osmID: Int?
-    let amenity: Amenity?
-    let osmType: OsmType?
-    let addrCity: City?
-    let healthcare: Amenity?
-    let addrStreet: String?
-    let addrDistrict: Town?
-    let nameAr, description, rawOperator, emergency: String?
-
-    enum CodingKeys: String, CodingKey {
-        case name, phone
-        case osmID
-        case amenity
-        case osmType
-        case addrCity
-        case healthcare
-        case addrStreet
-        case addrDistrict
-        case nameAr
-        case description
-        case rawOperator
-        case emergency
-    }
-}
-
-enum Town: String, Codable {
-    case fatih = "Fatih"
-}
-
-enum Amenity: String, Codable {
-    case pharmacy = "pharmacy"
-}
-
-enum OsmType: String, Codable {
-    case n = "n"
-}
-
-enum Sourcename: String, Codable {
-    case openstreetmap = "openstreetmap"
-}
-
-enum Detail: String, Codable {
-    case details = "details"
-    case detailsContact = "details.contact"
-}
-
-enum State: String, Codable {
-    case marmaraRegion = "Marmara Region"
-}
-
-enum FeatureType: String, Codable {
-    case feature = "Feature"
+// MARK: - Geometry
+struct Geometry: Codable {
+    let type: String?
+    let coordinates: [Double]?
 }

@@ -8,9 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlacesViewController" customModule="Tourist" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlacesCategoryViewController" customModule="Tourist" customModuleProvider="target">
             <connections>
-                <outlet property="placesTableView" destination="CjR-jc-e9B" id="diD-f3-abc"/>
+                <outlet property="placeCategoryTableView" destination="CjR-jc-e9B" id="diD-f3-abc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
