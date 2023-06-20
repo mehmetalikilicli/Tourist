@@ -14,7 +14,7 @@ class MainTabberViewController: UITabBarController {
         
         view.backgroundColor = .systemYellow
         
-        let vc1 = UINavigationController(rootViewController: PlacesViewController())
+        let vc1 = UINavigationController(rootViewController: PlacesCategoryViewController())
         let vc2 = UINavigationController(rootViewController: WeatherViewController())
         let vc3 = UINavigationController(rootViewController: ProfileViewController())
         

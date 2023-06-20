@@ -7,24 +7,22 @@
 
 import UIKit
 
-class PlacesViewController: UIViewController {
+class PlacesCategoryViewController: UIViewController {
     
     var placeCategoriesList = [PlaceCategory]()
+    var placesList : [Feature]?
     
     
-    @IBOutlet weak var placesTableView: UITableView!
+    @IBOutlet weak var placeCategoryTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchCategoriesList()
         
-        placesTableView.delegate = self
-        placesTableView.dataSource = self
-        
+        placeCategoryTableView.delegate = self
+        placeCategoryTableView.dataSource = self
 
-        placesTableView.register(UINib(nibName: "PlaceCategoryTableViewCell", bundle: nil), forCellReuseIdentifier: "placeCategoryCell")
-
-        
+        placeCategoryTableView.register(UINib(nibName: "PlaceCategoryTableViewCell", bundle: nil), forCellReuseIdentifier: "placeCategoryCell")
         
     }
     
@@ -33,7 +31,7 @@ class PlacesViewController: UIViewController {
     }
 }
 
-extension PlacesViewController: UITableViewDataSource, UITableViewDelegate {
+extension PlacesCategoryViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return placeCategoriesList.count
     }
@@ -43,5 +41,14 @@ extension PlacesViewController: UITableViewDataSource, UITableViewDelegate {
         cell.placeCategoryName.text = placeCategoriesList[indexPath.row].name
         cell.placeCategoryImage.image = UIImage(named: "\(placeCategoriesList[indexPath.row].image!)")
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        PlaceService.shared.getPlaces(placeName: placeCategoriesList[indexPath.row].name!, completion: { placeList in
+            DispatchQueue.main.async {
+                let placesVC = PlacesViewController()
+                placesVC.places = placeList!
+                self.navigationController?.pushViewController(placesVC, animated: true)
+            }
+        })
     }
 }
