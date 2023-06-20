@@ -15,8 +15,7 @@ class PlacesViewController: UIViewController {
     var places = [Feature]()
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
+        super.viewDidLoad()        
         configuration()
     }
     
@@ -45,5 +44,16 @@ extension PlacesViewController : UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "placeCell",for: indexPath) as! PlaceTableViewCell
         cell.setUpCell(place: places[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+                
+        PlaceDetailService.shared.getPlaceDetail(placeId: (places[indexPath.row].properties?.place_id)!) { detailFeature in
+            DispatchQueue.main.async {
+                let placeDetailVC = PlaceDetailViewController()
+                placeDetailVC.placeDetail = detailFeature!
+                self.navigationController?.pushViewController(placeDetailVC, animated: true)
+            }
+        }
     }
 }

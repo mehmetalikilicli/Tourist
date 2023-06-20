@@ -13,13 +13,11 @@ class PlaceService {
     
     var placeArray = [Feature]()
     
-    func getPlaces(placeName: String,completion: @escaping ([Feature]?) -> Void) {
-        print(placeName)
+    func getPlaces(placeName: String, completion: @escaping ([Feature]?) -> Void) {
         
         var placeCategory = placeControl(placeName: placeName)
 
         let urlString = "\(PlaceUrl.baseUrl)\(PlaceUrl.categories)\(placeCategory)\(PlaceUrl.bias)\(PlaceUrl.limit)\(PlaceUrl.apiKey)"
-        print(urlString)
         
         guard let url = URL(string: urlString) else {
             return

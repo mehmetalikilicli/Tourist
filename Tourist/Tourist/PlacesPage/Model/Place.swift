@@ -30,7 +30,7 @@ struct Properties: Codable {
     let lon, lat: Double?
     let formatted, addressLine1, addressLine2: String?
     let distance: Int?
-    let placeID, quarter, district, neighbourhood: String?
+    let place_id, quarter, district, neighbourhood: String?
 }
 
 // MARK: - Geometry
