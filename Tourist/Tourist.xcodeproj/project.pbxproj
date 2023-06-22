@@ -12,8 +12,6 @@
 		172C1F172A3F41EC0092F5F0 /* PlaceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172C1F162A3F41EC0092F5F0 /* PlaceDetail.swift */; };
 		1736D7452A388E8C003DE43D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1736D7432A388E8C003DE43D /* ProfileViewController.swift */; };
 		1736D7462A388E8C003DE43D /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1736D7442A388E8C003DE43D /* ProfileViewController.xib */; };
-		1759B1492A39B298004F0192 /* PlaceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1759B1482A39B298004F0192 /* PlaceListViewModel.swift */; };
-		1759B14B2A39B2EA004F0192 /* PlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1759B14A2A39B2EA004F0192 /* PlaceViewModel.swift */; };
 		1759B14D2A39C21A004F0192 /* PlaceCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1759B14C2A39C21A004F0192 /* PlaceCategoryModel.swift */; };
 		1759B14F2A39C3EE004F0192 /* PlaceCategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1759B14E2A39C3EE004F0192 /* PlaceCategoryService.swift */; };
 		1759B1562A39EEC3004F0192 /* PlaceCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1759B1542A39EEC3004F0192 /* PlaceCategoryTableViewCell.swift */; };
@@ -51,8 +49,6 @@
 		172C1F162A3F41EC0092F5F0 /* PlaceDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetail.swift; sourceTree = "<group>"; };
 		1736D7432A388E8C003DE43D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1736D7442A388E8C003DE43D /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
-		1759B1482A39B298004F0192 /* PlaceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListViewModel.swift; sourceTree = "<group>"; };
-		1759B14A2A39B2EA004F0192 /* PlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewModel.swift; sourceTree = "<group>"; };
 		1759B14C2A39C21A004F0192 /* PlaceCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCategoryModel.swift; sourceTree = "<group>"; };
 		1759B14E2A39C3EE004F0192 /* PlaceCategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCategoryService.swift; sourceTree = "<group>"; };
 		1759B1542A39EEC3004F0192 /* PlaceCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCategoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -163,15 +159,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		1736D7492A389062003DE43D /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				1759B1482A39B298004F0192 /* PlaceListViewModel.swift */,
-				1759B14A2A39B2EA004F0192 /* PlaceViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		1759B1582A3B0B37004F0192 /* PlacesCategory */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,7 +217,6 @@
 			children = (
 				17BEFCF82A389F5E00430510 /* Service */,
 				1736D7482A38905C003DE43D /* Model */,
-				1736D7492A389062003DE43D /* ViewModel */,
 				1736D7472A389057003DE43D /* View */,
 			);
 			path = PlacesPage;
@@ -239,6 +225,7 @@
 		176FF0F72A38886E0035157E /* WeatherPage */ = {
 			isa = PBXGroup;
 			children = (
+				17C639762A4312DA0083E6F9 /* Service */,
 				17EAB8612A42EC56002DBB52 /* Model */,
 				17EAB8602A42EC4E002DBB52 /* View */,
 			);
@@ -288,6 +275,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		17C639762A4312DA0083E6F9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				17EAB8672A42ECB8002DBB52 /* WeatherManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		17D7A7CD2A3731F800844A00 = {
 			isa = PBXGroup;
 			children = (
@@ -335,7 +330,6 @@
 			children = (
 				17EAB8622A42EC68002DBB52 /* WeatherData.swift */,
 				17EAB8652A42EC8E002DBB52 /* WeatherModel.swift */,
-				17EAB8672A42ECB8002DBB52 /* WeatherManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -436,8 +430,6 @@
 				176FF0E82A38857D0035157E /* MainTabberViewController.swift in Sources */,
 				17A012842A41E9CA0090CE18 /* PlaceDetailService.swift in Sources */,
 				17BEFCEB2A389DB600430510 /* Place.swift in Sources */,
-				1759B14B2A39B2EA004F0192 /* PlaceViewModel.swift in Sources */,
-				1759B1492A39B298004F0192 /* PlaceListViewModel.swift in Sources */,
 				176FF0EB2A3885E20035157E /* PlacesCategoryViewController.swift in Sources */,
 				17D7A7DA2A3731F800844A00 /* AppDelegate.swift in Sources */,
 				1759B15F2A3B0B7B004F0192 /* PlacesViewController.swift in Sources */,

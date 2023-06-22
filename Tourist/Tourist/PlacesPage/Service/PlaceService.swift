@@ -11,8 +11,6 @@ class PlaceService {
     
     static let shared = PlaceService()
     
-    var placeArray = [Feature]()
-    
     func getPlaces(placeName: String, completion: @escaping ([Feature]?) -> Void) {
         
         var placeCategory = placeControl(placeName: placeName)
@@ -58,6 +56,20 @@ class PlaceService {
             return "public_transport.train"
         case "Rent A Car":
             return "rental.car"
+        case "Outdoor And Sport":
+            return "commercial.outdoor_and_sport"
+        case "Camping Site":
+            return "camping.camp_site"
+        case "Cinema":
+            return "entertainment.cinema"
+        case "Zoo":
+            return "entertainment.zoo"
+        case "Theatre":
+            return "entertainment.culture.theatre"
+        case "Shopping Mall":
+            return "commercial.shopping_mall"
+        case "Supermarket":
+            return "commercial.supermarket"
         default:
             return "catering.restaurant"
         }

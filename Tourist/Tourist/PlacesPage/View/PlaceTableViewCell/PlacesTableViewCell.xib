@@ -10,23 +10,23 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="placeCell" rowHeight="72" id="KGk-i7-Jjw" customClass="PlaceTableViewCell" customModule="Tourist" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="573" height="72"/>
+            <rect key="frame" x="0.0" y="0.0" width="544" height="72"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="573" height="72"/>
+                <rect key="frame" x="0.0" y="0.0" width="544" height="72"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9YR-vd-eH8">
-                        <rect key="frame" x="20" y="13" width="390" height="41"/>
+                        <rect key="frame" x="20" y="13" width="280" height="41"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="390" id="Ioh-CS-9sX"/>
+                            <constraint firstAttribute="width" constant="280" id="awi-Me-rD7"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Uy-U7-O19">
-                        <rect key="frame" x="433" y="13" width="120" height="49"/>
+                        <rect key="frame" x="404" y="13" width="120" height="49"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="120" id="VuR-gM-s2n"/>
                         </constraints>
@@ -49,7 +49,7 @@
                 <outlet property="placeDistance" destination="5Uy-U7-O19" id="8L6-FV-5kg"/>
                 <outlet property="placeName" destination="9YR-vd-eH8" id="SnP-u4-G0W"/>
             </connections>
-            <point key="canvasLocation" x="325.38461538461536" y="-2.1327014218009479"/>
+            <point key="canvasLocation" x="303.07692307692309" y="-2.1327014218009479"/>
         </tableViewCell>
     </objects>
 </document>

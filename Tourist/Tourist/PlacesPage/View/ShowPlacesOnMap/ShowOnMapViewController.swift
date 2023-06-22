@@ -56,6 +56,8 @@ class ShowOnMapViewController: UIViewController, MKMapViewDelegate, CLLocationMa
         locationManager.requestWhenInUseAuthorization()
         //Start Location
         locationManager.startUpdatingLocation()
+        
+        title = "Places Map"
     }
     
     //Custom Pin
