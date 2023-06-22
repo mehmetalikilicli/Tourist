@@ -310,8 +310,8 @@
 				176FF0F52A3888500035157E /* Helpers */,
 				176FF0E62A3885460035157E /* Core */,
 				1724B1362A44554700D23318 /* LaunchScreen */,
-				17D7A7E72A3731FA00844A00 /* Info.plist */,
 				17D7A7E22A3731FA00844A00 /* Assets.xcassets */,
+				17D7A7E72A3731FA00844A00 /* Info.plist */,
 			);
 			path = Tourist;
 			sourceTree = "<group>";
