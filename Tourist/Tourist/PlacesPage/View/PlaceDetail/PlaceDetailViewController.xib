@@ -13,7 +13,6 @@
                 <outlet property="adressLine1Label" destination="h0Z-RF-G60" id="XtX-lu-n2k"/>
                 <outlet property="adressLine2Label" destination="bOk-TG-RqZ" id="z4L-Pc-dv1"/>
                 <outlet property="cityLabel" destination="xNJ-yj-9Ew" id="Seo-Z6-v0O"/>
-                <outlet property="descriptionLabel" destination="hMG-7n-KG2" id="2PY-FW-2a8"/>
                 <outlet property="nameLabel" destination="mad-DJ-Zln" id="dgD-MY-p9I"/>
                 <outlet property="phoneNumberLabel" destination="lZJ-3V-kqY" id="doq-ih-eUA"/>
                 <outlet property="stateLabel" destination="xNJ-yj-9Ew" id="NPe-zo-8x0"/>
@@ -78,77 +77,63 @@
                                         </label>
                                     </subviews>
                                 </stackView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMG-7n-KG2">
-                                    <rect key="frame" x="24" y="469.33333333333326" width="342" height="147"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="147" id="44Y-Kc-X0O"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLf-fk-3cZ">
-                                    <rect key="frame" x="63" y="640.33333333333337" width="264" height="55"/>
+                                    <rect key="frame" x="63" y="505" width="264" height="61"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="264" id="W3J-dA-taY"/>
-                                        <constraint firstAttribute="height" constant="55" id="hIw-Lz-kJA"/>
+                                        <constraint firstAttribute="height" constant="61" id="QwK-xJ-uIT"/>
                                     </constraints>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="filled" title="Show On Map"/>
+                                    <buttonConfiguration key="configuration" style="filled">
+                                        <attributedString key="attributedTitle">
+                                            <fragment content="Show Place On Map">
+                                                <attributes>
+                                                    <font key="NSFont" size="20" name="Helvetica"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
                                     <connections>
                                         <action selector="showOnMapButton:" destination="-1" eventType="touchUpInside" id="Y2i-wC-494"/>
                                     </connections>
                                 </button>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9DB-za-IVT">
-                                    <rect key="frame" x="310" y="0.0" width="80" height="178.66666666666666"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rM6-Q2-wAk">
-                                            <rect key="frame" x="0.0" y="94" width="80" height="85"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Su9-BK-RNz">
-                                            <rect key="frame" x="0.0" y="0.0" width="80" height="86"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="80" id="bus-pY-C0U"/>
-                                                <constraint firstAttribute="height" constant="86" id="j2l-SA-Zq6"/>
-                                            </constraints>
-                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="filled" image="heart" catalog="system">
-                                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </buttonConfiguration>
-                                        </button>
-                                    </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    <constraints>
-                                        <constraint firstItem="Su9-BK-RNz" firstAttribute="leading" secondItem="9DB-za-IVT" secondAttribute="leading" id="5li-Q4-uwJ"/>
-                                        <constraint firstAttribute="trailing" secondItem="rM6-Q2-wAk" secondAttribute="trailing" id="Cee-Fe-n8S"/>
-                                        <constraint firstAttribute="trailing" secondItem="Su9-BK-RNz" secondAttribute="trailing" id="S0H-D1-1xy"/>
-                                        <constraint firstItem="Su9-BK-RNz" firstAttribute="top" secondItem="9DB-za-IVT" secondAttribute="top" id="aBy-Az-VyB"/>
-                                        <constraint firstItem="rM6-Q2-wAk" firstAttribute="leading" secondItem="9DB-za-IVT" secondAttribute="leading" id="inO-vq-DkF"/>
-                                        <constraint firstAttribute="bottom" secondItem="rM6-Q2-wAk" secondAttribute="bottom" id="tjB-if-m02"/>
-                                    </constraints>
-                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svP-aU-iQW">
+                                    <rect key="frame" x="289" y="55" width="58" height="74"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="touch">
+                                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="addFavorite:" destination="-1" eventType="touchUpInside" id="kc2-rp-MCh"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9G-37-Ln3">
+                                    <rect key="frame" x="289" y="128" width="58" height="74"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="network"/>
+                                    <connections>
+                                        <action selector="share:" destination="-1" eventType="touchUpInside" id="1Zq-as-0v8"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstItem="ZLf-fk-3cZ" firstAttribute="leading" secondItem="bc6-h3-Ccs" secondAttribute="leading" constant="63" id="29k-u2-gca"/>
                                 <constraint firstItem="q21-f5-D19" firstAttribute="leading" secondItem="bc6-h3-Ccs" secondAttribute="leading" constant="24" id="5if-MA-8Y0"/>
                                 <constraint firstItem="fKd-6q-kYG" firstAttribute="top" secondItem="bc6-h3-Ccs" secondAttribute="top" id="7iB-j8-fnV"/>
-                                <constraint firstAttribute="trailing" secondItem="ZLf-fk-3cZ" secondAttribute="trailing" constant="63" id="BHn-9v-ZYN"/>
+                                <constraint firstItem="p9G-37-Ln3" firstAttribute="top" secondItem="bc6-h3-Ccs" secondAttribute="top" constant="128" id="9B4-Sa-nvI"/>
+                                <constraint firstItem="q21-f5-D19" firstAttribute="top" secondItem="svP-aU-iQW" secondAttribute="bottom" constant="73.670000000000002" id="Abq-gj-B8w"/>
                                 <constraint firstItem="fKd-6q-kYG" firstAttribute="leading" secondItem="bc6-h3-Ccs" secondAttribute="leading" id="GCd-cH-qsH"/>
-                                <constraint firstItem="hMG-7n-KG2" firstAttribute="leading" secondItem="bc6-h3-Ccs" secondAttribute="leading" constant="24" id="Kzd-Hg-dJr"/>
+                                <constraint firstItem="q21-f5-D19" firstAttribute="top" secondItem="p9G-37-Ln3" secondAttribute="bottom" constant="0.67000000000000004" id="IOn-dh-dbE"/>
+                                <constraint firstItem="ZLf-fk-3cZ" firstAttribute="leading" secondItem="bc6-h3-Ccs" secondAttribute="leading" constant="63" id="JpQ-iT-1zJ"/>
                                 <constraint firstItem="q21-f5-D19" firstAttribute="top" secondItem="fKd-6q-kYG" secondAttribute="bottom" constant="32" id="Mtm-yX-VDa"/>
-                                <constraint firstItem="hMG-7n-KG2" firstAttribute="top" secondItem="q21-f5-D19" secondAttribute="bottom" constant="36" id="SEZ-Gt-HF3"/>
-                                <constraint firstAttribute="trailing" secondItem="hMG-7n-KG2" secondAttribute="trailing" constant="24" id="Xfx-X7-UOz"/>
+                                <constraint firstItem="ZLf-fk-3cZ" firstAttribute="top" secondItem="q21-f5-D19" secondAttribute="bottom" constant="71.670000000000002" id="PXz-da-fZh"/>
+                                <constraint firstAttribute="trailing" secondItem="svP-aU-iQW" secondAttribute="trailing" constant="43" id="SKu-VA-upD"/>
+                                <constraint firstAttribute="trailing" secondItem="ZLf-fk-3cZ" secondAttribute="trailing" constant="63" id="XC9-MN-R61"/>
                                 <constraint firstAttribute="trailing" secondItem="q21-f5-D19" secondAttribute="trailing" constant="24" id="dSU-UT-ilq"/>
-                                <constraint firstItem="ZLf-fk-3cZ" firstAttribute="top" secondItem="hMG-7n-KG2" secondAttribute="bottom" constant="24" id="dlF-OH-LjE"/>
-                                <constraint firstItem="9DB-za-IVT" firstAttribute="leading" secondItem="fKd-6q-kYG" secondAttribute="trailing" constant="10" id="eJ7-Od-nQe"/>
-                                <constraint firstAttribute="trailing" secondItem="9DB-za-IVT" secondAttribute="trailing" id="ge7-85-ecZ"/>
-                                <constraint firstItem="q21-f5-D19" firstAttribute="top" secondItem="9DB-za-IVT" secondAttribute="bottom" constant="24" id="qgf-El-mxW"/>
-                                <constraint firstItem="9DB-za-IVT" firstAttribute="top" secondItem="bc6-h3-Ccs" secondAttribute="top" id="t3L-EM-CiI"/>
+                                <constraint firstItem="svP-aU-iQW" firstAttribute="top" secondItem="bc6-h3-Ccs" secondAttribute="top" constant="55" id="dcN-ax-bYE"/>
+                                <constraint firstItem="p9G-37-Ln3" firstAttribute="leading" secondItem="bc6-h3-Ccs" secondAttribute="leading" constant="289" id="gxQ-n2-LGh"/>
+                                <constraint firstItem="svP-aU-iQW" firstAttribute="leading" secondItem="bc6-h3-Ccs" secondAttribute="leading" constant="289" id="pcC-tg-HWD"/>
+                                <constraint firstAttribute="trailing" secondItem="p9G-37-Ln3" secondAttribute="trailing" constant="43" id="tQe-VU-MzQ"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -175,7 +160,8 @@
     </objects>
     <resources>
         <image name="cafe" width="170.66667175292969" height="170.66667175292969"/>
-        <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="network" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="touch" width="21.333333969116211" height="21.333333969116211"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

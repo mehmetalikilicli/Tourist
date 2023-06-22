@@ -16,10 +16,16 @@ struct PlaceUrl {
     static let apiKey = "&apiKey=defd55eeef0b447d923ef01684d98e40"
 }
 
-//https://api.geoapify.com/v2/place-details?id=5149e30632f1f93c4059d967e54dd9814440f00103f90153878230010000009203145369726b656369204761722045637a616e657369&apiKey=defd55eeef0b447d923ef01684d98e40
 
 struct PlaceDetailUrl {
     static let baseUrl = "https://api.geoapify.com/v2/place-details"
     static let baseId = "?id="
     static let apiKey = "&apiKey=defd55eeef0b447d923ef01684d98e40"
+}
+
+struct WeatherUrl {
+    static let baseUrl = "https://api.openweathermap.org/data/2.5/weather?appid=3dfd290ff795718f7c37e4bf2a4bd654&units=metric"
+    
+    
+    
 }

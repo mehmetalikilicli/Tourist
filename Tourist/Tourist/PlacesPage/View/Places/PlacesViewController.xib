@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlacesViewController" customModule="Tourist" customModuleProvider="target">
             <connections>
                 <outlet property="placeTableView" destination="G3O-rh-IJZ" id="EAC-Gf-2M6"/>
+                <outlet property="showOnMap" destination="gte-tZ-Kbg" id="ZOS-lc-3Te"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,15 +25,18 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gte-tZ-Kbg">
-                    <rect key="frame" x="116" y="744" width="159" height="44"/>
+                    <rect key="frame" x="68" y="738" width="254" height="61"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" id="2sm-0Z-ENT"/>
-                        <constraint firstAttribute="width" constant="159" id="uUZ-Ni-4CF"/>
+                        <constraint firstAttribute="height" constant="61" id="AzW-oU-2FL"/>
                     </constraints>
+                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="Show On Map"/>
+                    <buttonConfiguration key="configuration" style="filled" title=" Show Places On Map">
+                        <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                        <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
                     <connections>
-                        <action selector="showOnMap:" destination="-1" eventType="touchUpInside" id="vru-wW-alS"/>
+                        <action selector="showOnMap:" destination="-1" eventType="touchUpInside" id="2wj-7U-Nxe"/>
                     </connections>
                 </button>
             </subviews>
@@ -40,11 +44,11 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="G3O-rh-IJZ" secondAttribute="trailing" id="8eq-N2-eTC"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gte-tZ-Kbg" secondAttribute="trailing" constant="115" id="NLc-Hd-Uhi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gte-tZ-Kbg" secondAttribute="bottom" constant="11" id="JdM-Vt-g66"/>
                 <constraint firstItem="G3O-rh-IJZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="NRM-aS-jPx"/>
-                <constraint firstItem="gte-tZ-Kbg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="116" id="ctv-oM-p2K"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gte-tZ-Kbg" secondAttribute="trailing" constant="68" id="gEf-hr-fPT"/>
+                <constraint firstItem="gte-tZ-Kbg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="68" id="gzz-9Q-cef"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="G3O-rh-IJZ" secondAttribute="bottom" id="lcI-8W-pE6"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gte-tZ-Kbg" secondAttribute="bottom" constant="22" id="qJQ-ET-i3e"/>
                 <constraint firstItem="G3O-rh-IJZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="wGx-6h-IKd"/>
             </constraints>
             <point key="canvasLocation" x="130.76923076923077" y="-12.085308056872037"/>
