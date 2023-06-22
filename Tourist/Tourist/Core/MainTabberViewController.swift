@@ -19,8 +19,8 @@ class MainTabberViewController: UITabBarController {
         let vc3 = UINavigationController(rootViewController: ProfileViewController())
         
         vc1.tabBarItem.image = UIImage(systemName: "house")
-        vc2.tabBarItem.image = UIImage(systemName: "play.circle")
-        vc3.tabBarItem.image = UIImage(systemName: "magnifyingglass")
+        vc2.tabBarItem.image = UIImage(systemName: "sun.min.fill")
+        vc3.tabBarItem.image = UIImage(systemName: "person.fill")
         
         vc1.title = "Places"
         vc2.title = "Weather"

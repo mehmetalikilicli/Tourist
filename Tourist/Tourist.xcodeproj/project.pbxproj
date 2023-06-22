@@ -93,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1724B1362A44554700D23318 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				17D7A7E42A3731FA00844A00 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
 		172C1F112A3F41C00092F5F0 /* PlaceDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,7 +113,6 @@
 		1736D73F2A388E6C003DE43D /* ProfilePage */ = {
 			isa = PBXGroup;
 			children = (
-				1736D7422A388E7B003DE43D /* ViewModel */,
 				1736D7412A388E77003DE43D /* Model */,
 				1736D7402A388E72003DE43D /* View */,
 			);
@@ -126,13 +133,6 @@
 			children = (
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		1736D7422A388E7B003DE43D /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		1736D7472A389057003DE43D /* View */ = {
@@ -198,6 +198,8 @@
 		176FF0E62A3885460035157E /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				17D7A7D92A3731F800844A00 /* AppDelegate.swift */,
+				17D7A7DB2A3731F800844A00 /* SceneDelegate.swift */,
 				176FF0E72A38857D0035157E /* MainTabberViewController.swift */,
 			);
 			path = Core;
@@ -206,8 +208,8 @@
 		176FF0F52A3888500035157E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				17D7A7E22A3731FA00844A00 /* Assets.xcassets */,
-				17D7A7E42A3731FA00844A00 /* LaunchScreen.storyboard */,
+				176FF0F92A38888E0035157E /* Extensions */,
+				17BEFD002A38BBAF00430510 /* Constants */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -306,12 +308,10 @@
 				176FF0F72A38886E0035157E /* WeatherPage */,
 				1736D73F2A388E6C003DE43D /* ProfilePage */,
 				176FF0F52A3888500035157E /* Helpers */,
-				176FF0F92A38888E0035157E /* Extensions */,
 				176FF0E62A3885460035157E /* Core */,
-				17BEFD002A38BBAF00430510 /* Constants */,
+				1724B1362A44554700D23318 /* LaunchScreen */,
 				17D7A7E72A3731FA00844A00 /* Info.plist */,
-				17D7A7D92A3731F800844A00 /* AppDelegate.swift */,
-				17D7A7DB2A3731F800844A00 /* SceneDelegate.swift */,
+				17D7A7E22A3731FA00844A00 /* Assets.xcassets */,
 			);
 			path = Tourist;
 			sourceTree = "<group>";
