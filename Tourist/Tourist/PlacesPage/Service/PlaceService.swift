@@ -13,7 +13,7 @@ class PlaceService {
     
     func getPlaces(placeName: String, completion: @escaping ([Feature]?) -> Void) {
         
-        var placeCategory = placeControl(placeName: placeName)
+        let placeCategory = placeControl(placeName: placeName)
 
         let urlString = "\(PlaceUrl.baseUrl)\(PlaceUrl.categories)\(placeCategory)\(PlaceUrl.bias)\(PlaceUrl.limit)\(PlaceUrl.apiKey)"
         
@@ -24,7 +24,6 @@ class PlaceService {
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard error == nil, let data = data else {
                 completion(nil)
-                print(error)
                 return
             }
             let answer = try? JSONDecoder().decode(Place.self, from: data)

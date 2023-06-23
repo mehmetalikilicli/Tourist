@@ -43,7 +43,6 @@ class PlaceDetailViewController: UIViewController {
             phoneNumberLabel.text = placeDetail.properties?.contact?.phone ?? "Unknown Phone Number"
             stateLabel.text = placeDetail.properties?.state ?? "Unknown State"
             cityLabel.text = placeDetail.properties?.city ?? "Unknown City"
-            //descriptionLabel.text = placeDetail.type?.description 
         }
     }
     

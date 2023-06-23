@@ -26,6 +26,4 @@ struct PlaceDetailUrl {
 struct WeatherUrl {
     static let baseUrl = "https://api.openweathermap.org/data/2.5/weather?appid=3dfd290ff795718f7c37e4bf2a4bd654&units=metric"
     
-    
-    
 }

@@ -26,11 +26,10 @@ class PlaceDetailService {
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard error == nil, let data = data else {
                 completion(nil)
-                print("error()\(error)")
                 return
             }
             let answer = try? JSONDecoder().decode(PlaceDetail.self, from: data)
-            print("answer\(answer)")
+            
             //Api return features list. So use first index.
             answer == nil ? completion(nil) : completion(answer!.features?.first)
         }.resume()
