@@ -11,11 +11,9 @@ class PlaceService {
     
     static let shared = PlaceService()
     
-    var placeArray = [Feature]()
-    
     func getPlaces(placeName: String, completion: @escaping ([Feature]?) -> Void) {
         
-        var placeCategory = placeControl(placeName: placeName)
+        let placeCategory = placeControl(placeName: placeName)
 
         let urlString = "\(PlaceUrl.baseUrl)\(PlaceUrl.categories)\(placeCategory)\(PlaceUrl.bias)\(PlaceUrl.limit)\(PlaceUrl.apiKey)"
         
@@ -26,7 +24,6 @@ class PlaceService {
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard error == nil, let data = data else {
                 completion(nil)
-                print(error)
                 return
             }
             let answer = try? JSONDecoder().decode(Place.self, from: data)
@@ -58,6 +55,20 @@ class PlaceService {
             return "public_transport.train"
         case "Rent A Car":
             return "rental.car"
+        case "Outdoor And Sport":
+            return "commercial.outdoor_and_sport"
+        case "Camping Site":
+            return "camping.camp_site"
+        case "Cinema":
+            return "entertainment.cinema"
+        case "Zoo":
+            return "entertainment.zoo"
+        case "Theatre":
+            return "entertainment.culture.theatre"
+        case "Shopping Mall":
+            return "commercial.shopping_mall"
+        case "Supermarket":
+            return "commercial.supermarket"
         default:
             return "catering.restaurant"
         }

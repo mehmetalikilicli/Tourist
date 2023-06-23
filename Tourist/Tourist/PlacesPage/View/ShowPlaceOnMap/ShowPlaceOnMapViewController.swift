@@ -43,11 +43,7 @@ class ShowPlaceOnMapViewController: UIViewController, MKMapViewDelegate,  CLLoca
     }
     
     func configuration(){
-        
-        
-        
-        
-        
+
         //MapView
         mapView.delegate = self
         mapView.showsUserLocation = true

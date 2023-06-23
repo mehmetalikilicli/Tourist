@@ -19,16 +19,21 @@ class PlaceDetailViewController: UIViewController {
     @IBOutlet weak var phoneNumberLabel: UILabel!
     @IBOutlet weak var stateLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUpUI()
-        
-        
     }
     
+    
+    @IBAction func addFavorite(_ sender: Any) {
+        makeAlert(title: "Favoriye Eklendi", message: "\(placeDetail?.properties?.name! ?? "Bu yer") başarılı bir şekilde favorilere eklendi.")
+    }
+    
+    @IBAction func share(_ sender: Any) {
+        makeAlert(title: "Paylaşıldı", message: "\(placeDetail?.properties?.name! ?? "Bu Yer") paylaşıldı.")
+    }
     func setUpUI(){
         
         if let placeDetail = placeDetail {
@@ -38,21 +43,25 @@ class PlaceDetailViewController: UIViewController {
             phoneNumberLabel.text = placeDetail.properties?.contact?.phone ?? "Unknown Phone Number"
             stateLabel.text = placeDetail.properties?.state ?? "Unknown State"
             cityLabel.text = placeDetail.properties?.city ?? "Unknown City"
-            descriptionLabel.text = placeDetail.type?.description 
         }
-
-        
-        
-        
-
-        
     }
     
     
     @IBAction func showOnMapButton(_ sender: Any) {
         
-        let placeShowOnMapVC = ShowPlaceOnMapViewController()
-        placeShowOnMapVC.place = placeDetail
-        self.navigationController?.pushViewController(placeShowOnMapVC, animated: true)
+        if placeDetail != nil{
+            let placeShowOnMapVC = ShowPlaceOnMapViewController()
+            placeShowOnMapVC.place = placeDetail
+            self.navigationController?.pushViewController(placeShowOnMapVC, animated: true)
+        } else {
+            makeAlert(title: "Hata", message: "Bu yerin konumuna ulaşılamıyor!")
+        }
     }
+    
+    func makeAlert(title: String, message: String) {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+            let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+            alert.addAction(okButton)
+            self.present(alert, animated: true, completion: nil)
+        }
 }

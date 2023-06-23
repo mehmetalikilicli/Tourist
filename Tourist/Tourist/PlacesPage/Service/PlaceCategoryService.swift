@@ -23,6 +23,13 @@ class PlaceCategoryService{
     PlaceCategory(name: "Airport", image: "airport"),
     PlaceCategory(name: "Train Station", image: "trainStation"),
     //PlaceCategory(name: "Rent A Car", image: "rentACar"),
+    PlaceCategory(name: "Outdoor And Sport", image: "outdoorandsport"),
+    PlaceCategory(name: "Camping Site", image: "campingsite"),
+    PlaceCategory(name: "Cinema", image: "cinema"),
+    PlaceCategory(name: "Theatre", image: "theatre"),
+    PlaceCategory(name: "Zoo", image: "zoo"),
+    PlaceCategory(name: "Shopping Mall", image: "shoppingmall"),
+    PlaceCategory(name: "Supermarket", image: "supermarket"),
     ]
     
     func getPlaceCategories() -> [PlaceCategory]{
