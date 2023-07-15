@@ -33,7 +33,7 @@ class PlaceCategoryViewModel {
     
     func selectPlaceCategory(at index: Int, latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
         let placeCategory = placeCategoriesList[index]
-        PlaceService.shared.getPlaces(placeName: placeCategory.name ?? "",latitude: latitude, longitude: longitude) { [weak self] placeList in
+        PlaceService.shared.getPlaces(placeName: placeCategory.name ?? "museum",latitude: latitude, longitude: longitude) { [weak self] placeList in
             DispatchQueue.main.async {
                 guard let placesList = placeList else {
                     // Yerler çekilemedi, hata durumuyla başa çıkılabilir
