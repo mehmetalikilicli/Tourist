@@ -12,6 +12,7 @@ class PlaceCategoryService{
     static let shared = PlaceCategoryService()
     
     var placeCategoriesList : [PlaceCategory] = [
+    PlaceCategory(name: "Flo", image: "flo"),
     PlaceCategory(name: "Restaurant", image: "restaurant"),
     PlaceCategory(name: "Hotel", image: "hotel"),
     PlaceCategory(name: "Museum", image: "museum"),

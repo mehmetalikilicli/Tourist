@@ -24,6 +24,9 @@ class PlacesCategoryViewController: UIViewController {
         configureCollectionView()
         congigureLocationManager()
         setupViewModel()
+        self.title = "Categories"
+    }
+    override func viewWillAppear(_ animated: Bool) {
         viewModel.fetchPlaceCategories()
     }
     
@@ -84,7 +87,7 @@ extension PlacesCategoryViewController: PlaceCategoryViewModelDelegate {
         }
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        viewModel.selectPlaceCategory(at: indexPath.row,latitude: currentLatitude, longitude: currentLongitude)
+        viewModel.selectPlaceCategory(at: indexPath.row, latitude: currentLatitude, longitude: currentLongitude)
     }
 }
 

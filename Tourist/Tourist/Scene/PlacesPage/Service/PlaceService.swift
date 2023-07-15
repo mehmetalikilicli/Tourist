@@ -17,7 +17,7 @@ class PlaceService {
         let placeCategory = placeControl(placeName: placeName)
         
         let currentLocation = currentLocationString(latitude: String(latitude), longitude: String(longitude))
-
+        
         let urlString = "\(PlaceUrl.baseUrl)\(PlaceUrl.categories)\(placeCategory)\(currentLocation)\(PlaceUrl.limit)\(PlaceUrl.apiKey)"
         
         guard let url = URL(string: urlString) else {
@@ -37,6 +37,9 @@ class PlaceService {
     
     private func placeControl(placeName: String) -> String {
         switch placeName {
+            
+        case "Flo":
+            return "commercial.clothing.shoes"
         case "Restaurant":
             return "catering.restaurant"
         case "Hotel":

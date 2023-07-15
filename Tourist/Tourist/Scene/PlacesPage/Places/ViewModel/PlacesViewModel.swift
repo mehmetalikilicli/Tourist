@@ -42,8 +42,12 @@ class PlacesViewModel: PlacesViewModelProtocol {
     
     func checkPlaces() {
         for place in places {
-            if let name = place.properties?.name {
-                checkedPlaces.append(place)
+            if let name = place.properties?.name, let categories = place.properties?.categories {
+                if categories.contains("commercial.clothing.shoes") && name == "FLO" {
+                    checkedPlaces.append(place)
+                } else if !categories.contains("commercial.clothing.shoes") {
+                 checkedPlaces.append(place)
+                }
             }
         }
         delegate?.reloadTableView()
