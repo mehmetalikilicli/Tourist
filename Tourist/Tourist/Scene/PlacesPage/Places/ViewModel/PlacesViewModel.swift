@@ -41,15 +41,19 @@ class PlacesViewModel: PlacesViewModelProtocol {
     }
     
     func checkPlaces() {
-        for place in places {
-            if let name = place.properties?.name, let categories = place.properties?.categories {
-                if categories.contains("commercial.clothing.shoes") && name == "FLO" {
-                    checkedPlaces.append(place)
-                } else if !categories.contains("commercial.clothing.shoes") {
-                 checkedPlaces.append(place)
-                }
-            }
-        }
+        //Some place has no name. Control place has name or not.
+        //For just FLO shops
+        
+         for place in places {
+             if let name = place.properties?.name, let categories = place.properties?.categories {
+                 if categories.contains("commercial.clothing.shoes") && name == "FLO" {
+                     checkedPlaces.append(place)
+                 } else if !categories.contains("commercial.clothing.shoes") {
+                  checkedPlaces.append(place)
+                 }
+             }
+         }
+        
         delegate?.reloadTableView()
     }
     
@@ -58,7 +62,7 @@ class PlacesViewModel: PlacesViewModelProtocol {
     }
     
     func getPlaceDetail(at index: Int) {
-        guard let placeId = places[index].properties?.place_id else {
+        guard let placeId = checkedPlaces[index].properties?.place_id else {
             delegate?.showError(message: "Place ID not found")
             return
         }
