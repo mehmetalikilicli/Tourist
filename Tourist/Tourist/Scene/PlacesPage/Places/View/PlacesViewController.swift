@@ -18,7 +18,9 @@ class PlacesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         configureUI()
         //viewModel = PlacesViewModel()
         viewModel.delegate = self
@@ -38,8 +40,10 @@ class PlacesViewController: UIViewController {
         placeTableView.register(UINib(nibName: "PlacesTableViewCell", bundle: nil), forCellReuseIdentifier: "placeCell")
         showOnMap.layer.cornerRadius = 12
         title = "Places"
-    }
+        navigationController?.navigationBar.tintColor = .black
 
+    }
+    
 }
 
 extension PlacesViewController: PlacesViewModelDelegate {

@@ -40,6 +40,8 @@ class PlaceService {
             
         case "Flo":
             return "commercial.clothing.shoes"
+        /*case "Sport IN Street":
+            return "commercial.clothing.shoes"*/
         case "Restaurant":
             return "catering.restaurant"
         case "Hotel":

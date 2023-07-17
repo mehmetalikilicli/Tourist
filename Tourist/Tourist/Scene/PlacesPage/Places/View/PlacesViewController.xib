@@ -25,15 +25,15 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gte-tZ-Kbg">
-                    <rect key="frame" x="68" y="738" width="254" height="61"/>
+                    <rect key="frame" x="288" y="704" width="86" height="106"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="61" id="AzW-oU-2FL"/>
+                        <constraint firstAttribute="height" constant="106" id="BRn-JY-Sfh"/>
+                        <constraint firstAttribute="width" constant="86" id="POK-XP-YlT"/>
                     </constraints>
-                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title=" Show Places On Map">
-                        <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
-                        <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <buttonConfiguration key="configuration" style="filled" image="placeholder">
+                        <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
                     <connections>
                         <action selector="showOnMap:" destination="-1" eventType="touchUpInside" id="2wj-7U-Nxe"/>
@@ -44,10 +44,9 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="G3O-rh-IJZ" secondAttribute="trailing" id="8eq-N2-eTC"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gte-tZ-Kbg" secondAttribute="bottom" constant="11" id="JdM-Vt-g66"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gte-tZ-Kbg" secondAttribute="trailing" constant="16" id="8k8-Pd-2Fs"/>
                 <constraint firstItem="G3O-rh-IJZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="NRM-aS-jPx"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gte-tZ-Kbg" secondAttribute="trailing" constant="68" id="gEf-hr-fPT"/>
-                <constraint firstItem="gte-tZ-Kbg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="68" id="gzz-9Q-cef"/>
+                <constraint firstItem="gte-tZ-Kbg" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="YD3-BN-lJn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="G3O-rh-IJZ" secondAttribute="bottom" id="lcI-8W-pE6"/>
                 <constraint firstItem="G3O-rh-IJZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="wGx-6h-IKd"/>
             </constraints>
@@ -55,6 +54,7 @@
         </view>
     </objects>
     <resources>
+        <image name="placeholder" width="85.333335876464844" height="85.333335876464844"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

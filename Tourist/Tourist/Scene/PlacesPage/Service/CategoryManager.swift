@@ -13,6 +13,7 @@ class PlaceCategoryService{
     
     var placeCategoriesList : [PlaceCategory] = [
     PlaceCategory(name: "Flo", image: "flo"),
+    //PlaceCategory(name: "Sport IN Street", image: "sportinstreet"),
     PlaceCategory(name: "Restaurant", image: "restaurant"),
     PlaceCategory(name: "Hotel", image: "hotel"),
     PlaceCategory(name: "Museum", image: "museum"),
