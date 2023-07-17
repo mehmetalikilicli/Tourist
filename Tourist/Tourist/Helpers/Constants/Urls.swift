@@ -12,7 +12,7 @@ struct PlaceUrl {
     static let baseUrl = "https://api.geoapify.com/v2/places"
     static let categories = "?categories="
     //static let bias = "&bias=proximity:28.97953000000000000,41.01513700000000"
-    static let limit = "&limit=400"
+    static let limit = "&limit=35"
     static let apiKey = "&apiKey=defd55eeef0b447d923ef01684d98e40"
 }
 

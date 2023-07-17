@@ -42,13 +42,15 @@ class PlacesViewModel: PlacesViewModelProtocol {
     
     func checkPlaces() {
         //Some place has no name. Control place has name or not.
-        //For just FLO shops
+        //For just FLO and INSTREET shops
         
          for place in places {
              if let name = place.properties?.name, let categories = place.properties?.categories {
                  if categories.contains("commercial.clothing.shoes") && name == "FLO" {
                      checkedPlaces.append(place)
-                 } else if !categories.contains("commercial.clothing.shoes") {
+                 } /*else if categories.contains("commercial.clothing.shoes") && name == "Sport In Street" {
+                     checkedPlaces.append(place)
+                 }*/  else if !categories.contains("commercial.clothing.shoes") {
                   checkedPlaces.append(place)
                  }
              }

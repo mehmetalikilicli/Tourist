@@ -10,12 +10,12 @@ import UIKit
 class PlaceTableViewCell: UITableViewCell {
 
     
+    @IBOutlet weak var placeImage: UIImageView!
     @IBOutlet weak var placeName: UILabel!
-    
+    @IBOutlet weak var placeAddress: UILabel!
     @IBOutlet weak var placeDistance: UILabel!
     
-    
-    var place: Feature?
+    var placeCateory: String?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,12 +27,10 @@ class PlaceTableViewCell: UITableViewCell {
 
     }
     
-    func getPlace(place: Feature){
-        self.place = place
-    }
-    
     func setUpCell(place: Feature){
-        placeName.text = place.properties?.name
-        placeDistance.text = place.properties?.distance != nil ? "\(String((place.properties?.distance)!))m" : nil
+        placeImage.image = UIImage.imageForCategory(categories: (place.properties?.categories)!)
+            placeName.text = place.properties?.name ?? "Place Name"
+            placeAddress.text = place.properties?.suburb ?? "Place Address"
+            placeDistance.text = place.properties?.distance != nil ? "\(String((place.properties?.distance)!))m" : nil
     }
 }

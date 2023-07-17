@@ -11,6 +11,10 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        configureUI()
+    }
+    
+    func configureUI(){
+        self.title = "Profile"
     }
 }

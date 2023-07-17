@@ -31,6 +31,8 @@ class FavoriteViewController: UIViewController {
         favoriteTableView.delegate = self
         
         favoriteTableView.register(UINib(nibName: "FavoriteTableViewCell", bundle: nil), forCellReuseIdentifier: "favoriteCell")
+        navigationController?.navigationBar.tintColor = .black
+        self.title = "Favorites"
     }
     
     func makeAlert(title: String, message: String) {

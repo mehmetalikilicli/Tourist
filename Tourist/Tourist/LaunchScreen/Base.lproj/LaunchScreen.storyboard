@@ -18,15 +18,37 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S6M-qQ-fkV">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ad6-JL-ImO">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOURIST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJk-HU-St8">
+                                        <rect key="frame" x="90.333333333333329" y="82" width="209.66666666666669" height="60"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flo" translatesAutoresizingMaskIntoConstraints="NO" id="yph-6L-LQi">
+                                        <rect key="frame" x="0.0" y="191" width="390" height="440"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="440" id="IVt-XW-IKn"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstItem="yph-6L-LQi" firstAttribute="top" secondItem="lJk-HU-St8" secondAttribute="bottom" constant="49" id="3Us-ro-BgA"/>
+                                    <constraint firstItem="yph-6L-LQi" firstAttribute="top" secondItem="S6M-qQ-fkV" secondAttribute="top" constant="191" id="4UB-eP-kga"/>
+                                    <constraint firstItem="Ad6-JL-ImO" firstAttribute="leading" secondItem="S6M-qQ-fkV" secondAttribute="leading" id="Mtg-TA-gNu"/>
+                                    <constraint firstItem="yph-6L-LQi" firstAttribute="trailing" secondItem="Ad6-JL-ImO" secondAttribute="trailing" id="PVJ-UT-zTo"/>
+                                    <constraint firstItem="lJk-HU-St8" firstAttribute="centerX" secondItem="S6M-qQ-fkV" secondAttribute="centerX" id="UdV-GL-PrK"/>
+                                    <constraint firstItem="yph-6L-LQi" firstAttribute="leading" secondItem="Ad6-JL-ImO" secondAttribute="leading" id="Xtk-rH-Y3S"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ad6-JL-ImO" secondAttribute="bottom" id="fsl-tQ-erO"/>
+                                    <constraint firstItem="Ad6-JL-ImO" firstAttribute="top" secondItem="S6M-qQ-fkV" secondAttribute="top" id="hGo-u0-jeh"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ad6-JL-ImO" secondAttribute="trailing" id="nhh-MS-AfT"/>
+                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TOURIST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJk-HU-St8">
-                                <rect key="frame" x="49" y="178" width="293" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="50"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -44,6 +66,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="flo" width="133.33332824707031" height="133.33332824707031"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
