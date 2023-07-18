@@ -22,6 +22,7 @@ struct DetailFeature: Codable {
 // MARK: - Properties
 struct DetailProperties: Codable {
     let name: String?
+    let categories: [String]?
     let contact: Contact?
     let city, state: String?
     let address_line1, address_line2: String?

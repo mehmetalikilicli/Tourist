@@ -50,7 +50,7 @@ extension FavoriteViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteCell") as! FavoriteTableViewCell
-        cell.textLabel?.text = viewModel.favoritePlacesList[indexPath.row].properties?.name
+        cell.setUpCell(place: viewModel.favoritePlacesList[indexPath.row])
         return cell
     }
     
@@ -74,7 +74,7 @@ extension FavoriteViewController: UITableViewDataSource, UITableViewDelegate {
                     placeDetailVC.viewModel = detailViewModel
                     self.navigationController?.pushViewController(placeDetailVC, animated: true)
                 } else {
-                    self.makeAlert(title: "Hata", message: "Yer Detayı Getirilemedi!")
+                    Alert.makeAlert(viewController: self, title: "Hata", message: "Yer Detayı Getirilemedi!")
                 }
             }
         }
@@ -90,7 +90,7 @@ extension FavoriteViewController: FavoriteViewModelDelegate {
     
     func showError(title: String, message: String) {
         DispatchQueue.main.async {
-            self.makeAlert(title: title, message: message)
+            Alert.makeAlert(viewController: self, title: title, message: message)
         }
     }
 }

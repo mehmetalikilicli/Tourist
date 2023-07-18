@@ -21,10 +21,11 @@ class PlacesViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        configureUI()
+        
         //viewModel = PlacesViewModel()
         viewModel.delegate = self
         viewModel.checkPlaces()
+        configureUI()
     }
     
     @IBAction func showOnMap(_ sender: Any) {
@@ -39,11 +40,28 @@ class PlacesViewController: UIViewController {
         placeTableView.delegate = self
         placeTableView.register(UINib(nibName: "PlacesTableViewCell", bundle: nil), forCellReuseIdentifier: "placeCell")
         showOnMap.layer.cornerRadius = 12
-        title = "Places"
+        title = String.labeForCategory(categories: (viewModel.checkedPlace(at: 0).properties?.categories)!)
         navigationController?.navigationBar.tintColor = .black
 
     }
     
+}
+
+extension PlacesViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.checkedPlacesCount
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "placeCell", for: indexPath) as! PlaceTableViewCell
+        let place = viewModel.checkedPlace(at: indexPath.row)
+        cell.setUpCell(place: place)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.getPlaceDetail(at: indexPath.row)
+    }
 }
 
 extension PlacesViewController: PlacesViewModelDelegate {
@@ -67,22 +85,5 @@ extension PlacesViewController: PlacesViewModelDelegate {
             // Handle error display, e.g., show an alert
             //self?.showAlert(message: message)
         }
-    }
-}
-
-extension PlacesViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.checkedPlacesCount
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "placeCell", for: indexPath) as! PlaceTableViewCell
-        let place = viewModel.checkedPlace(at: indexPath.row)
-        cell.setUpCell(place: place)
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.getPlaceDetail(at: indexPath.row)
     }
 }
