@@ -9,15 +9,60 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteCell" id="KGk-i7-Jjw" customClass="FavoriteTableViewCell" customModule="Tourist" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteCell" rowHeight="116" id="KGk-i7-Jjw" customClass="FavoriteTableViewCell" customModule="Tourist" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="588" height="116"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="588" height="116"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cafe" translatesAutoresizingMaskIntoConstraints="NO" id="1Yw-kw-oTU">
+                        <rect key="frame" x="12" y="0.0" width="115" height="115"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="115" id="o7P-hi-MxT"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9A-Cq-IPM">
+                        <rect key="frame" x="151" y="12" width="417" height="41"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="41" id="BCc-6q-ap3"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Lh-nB-KzR">
+                        <rect key="frame" x="151" y="63" width="417" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="48" id="Bsn-Ue-3ds"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="5Lh-nB-KzR" firstAttribute="top" secondItem="c9A-Cq-IPM" secondAttribute="bottom" constant="10" id="FhL-4c-cRA"/>
+                    <constraint firstItem="1Yw-kw-oTU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="Lnb-SN-05r"/>
+                    <constraint firstAttribute="trailing" secondItem="c9A-Cq-IPM" secondAttribute="trailing" constant="20" symbolic="YES" id="Uq8-Bz-cS6"/>
+                    <constraint firstAttribute="bottom" secondItem="1Yw-kw-oTU" secondAttribute="bottom" constant="1" id="exE-Vz-IqF"/>
+                    <constraint firstItem="c9A-Cq-IPM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="g9o-vz-vvf"/>
+                    <constraint firstItem="1Yw-kw-oTU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="gKM-CD-4Zf"/>
+                    <constraint firstAttribute="trailing" secondItem="5Lh-nB-KzR" secondAttribute="trailing" constant="20" symbolic="YES" id="jDq-92-f0n"/>
+                    <constraint firstItem="c9A-Cq-IPM" firstAttribute="leading" secondItem="1Yw-kw-oTU" secondAttribute="trailing" constant="24" id="lyf-wY-KKG"/>
+                    <constraint firstItem="5Lh-nB-KzR" firstAttribute="leading" secondItem="1Yw-kw-oTU" secondAttribute="trailing" constant="24" id="mbg-JI-us8"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="132" y="-11"/>
+            <connections>
+                <outlet property="favoriteImageView" destination="1Yw-kw-oTU" id="MUy-5b-nNd"/>
+                <outlet property="nameLabel" destination="c9A-Cq-IPM" id="Y84-eQ-aIM"/>
+                <outlet property="suburbLabel" destination="5Lh-nB-KzR" id="z9t-hP-vuh"/>
+            </connections>
+            <point key="canvasLocation" x="336.92307692307691" y="14.218009478672984"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="cafe" width="170.66667175292969" height="170.66667175292969"/>
+    </resources>
 </document>

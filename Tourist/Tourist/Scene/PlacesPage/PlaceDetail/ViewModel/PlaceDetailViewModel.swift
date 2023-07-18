@@ -50,8 +50,7 @@ class PlaceDetailViewModel {
     }
     
     func share() {
-        let message = "\(placeDetail?.properties?.name ?? "Bu Yer") paylaşıldı."
-        showAlert(title: "Paylaşıldı", message: message)
+        //Share
     }
     
     func showOnMapButton(navigationController: UINavigationController?) {

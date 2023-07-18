@@ -13,6 +13,7 @@ class PlaceDetailViewController: UIViewController, PlaceDetailViewModelDelegate 
     
     var viewModel: PlaceDetailViewModel!
     
+    @IBOutlet weak var detailImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLine1Label: UILabel!
     @IBOutlet weak var addressLine2Label: UILabel!
@@ -29,7 +30,7 @@ class PlaceDetailViewController: UIViewController, PlaceDetailViewModelDelegate 
     }
     
     func favoriteAdded() {
-        makeAlert(title: "Favoriye Eklendi", message: "\(viewModel.placeDetail?.properties?.name ?? "Bu yer") başarılı bir şekilde favorilere eklendi.")
+        Alert.makeAlert(viewController: self, title: "Favoriye Eklendi", message: "\(viewModel.placeDetail?.properties?.name ?? "Bu yer") başarılı bir şekilde favorilere eklendi.")
     }
     
     @IBAction func addFavorite(_ sender: Any) {
@@ -37,10 +38,12 @@ class PlaceDetailViewController: UIViewController, PlaceDetailViewModelDelegate 
     }
     
     @IBAction func share(_ sender: Any) {
+        Alert.makeAlert(viewController: self, title: "Paylaşıldı", message: "\(viewModel.placeDetail?.properties?.name ?? "Bu yer") başarılı bir şekilde paylaşıldı.")
         viewModel.share()
     }
     
     func setUpUI() {
+        detailImageView.image = UIImage.imageForCategory(categories: (viewModel.placeDetail?.properties?.categories)!)
         nameLabel.text = viewModel.placeDetail?.properties?.name ?? "Unknown Name"
         addressLine1Label.text = viewModel.placeDetail?.properties?.address_line1 ?? "Address Line 1"
         addressLine2Label.text = viewModel.placeDetail?.properties?.address_line2 ?? "Address Line 2"
@@ -51,14 +54,5 @@ class PlaceDetailViewController: UIViewController, PlaceDetailViewModelDelegate 
     
     @IBAction func showOnMapButton(_ sender: Any) {
         viewModel.showOnMapButton(navigationController: navigationController)
-    }
-    
-    func makeAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okButton = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alert.addAction(okButton)
-        
-        // Assuming this view controller is presented
-        present(alert, animated: true, completion: nil)
     }
 }

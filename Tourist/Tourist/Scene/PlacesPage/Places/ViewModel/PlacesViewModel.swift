@@ -46,7 +46,7 @@ class PlacesViewModel: PlacesViewModelProtocol {
         
          for place in places {
              if let name = place.properties?.name, let categories = place.properties?.categories {
-                 if categories.contains("commercial.clothing.shoes") && name == "FLO" {
+                 if categories.contains("commercial.clothing.shoes") && name == "FLO" || name == "Sport In Street"{
                      checkedPlaces.append(place)
                  } /*else if categories.contains("commercial.clothing.shoes") && name == "Sport In Street" {
                      checkedPlaces.append(place)

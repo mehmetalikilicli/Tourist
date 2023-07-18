@@ -13,6 +13,7 @@
                 <outlet property="addressLine1Label" destination="h0Z-RF-G60" id="u12-6P-G1a"/>
                 <outlet property="addressLine2Label" destination="bOk-TG-RqZ" id="2Gu-Ng-WtE"/>
                 <outlet property="cityLabel" destination="xNJ-yj-9Ew" id="Seo-Z6-v0O"/>
+                <outlet property="detailImageView" destination="fKd-6q-kYG" id="Hhr-h6-WUF"/>
                 <outlet property="nameLabel" destination="mad-DJ-Zln" id="dgD-MY-p9I"/>
                 <outlet property="phoneNumberLabel" destination="lZJ-3V-kqY" id="doq-ih-eUA"/>
                 <outlet property="stateLabel" destination="xNJ-yj-9Ew" id="NPe-zo-8x0"/>
