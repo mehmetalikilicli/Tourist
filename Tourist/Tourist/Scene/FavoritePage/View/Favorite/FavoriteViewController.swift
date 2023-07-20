@@ -9,6 +9,7 @@ import UIKit
 import CoreData
 
 class FavoriteViewController: UIViewController {
+    
     @IBOutlet weak var favoriteTableView: UITableView!
     
     private var viewModel: FavoriteViewModel!
@@ -50,7 +51,7 @@ extension FavoriteViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteCell") as! FavoriteTableViewCell
-        cell.setUpCell(place: viewModel.favoritePlacesList[indexPath.row])
+            cell.setUpCell(place: viewModel.favoritePlacesList[indexPath.row])
         return cell
     }
     

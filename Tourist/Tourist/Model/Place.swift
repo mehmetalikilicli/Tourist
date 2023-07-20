@@ -28,7 +28,7 @@ struct Properties: Codable {
     let city, town, postcode, suburb: String?
     let street: String?
     let lon, lat: Double?
-    let formatted, addressLine1, addressLine2: String?
+    let addressLine1, addressLine2: String?
     let categories: [String]?
     let distance: Int?
     let place_id, quarter, district, neighbourhood: String?

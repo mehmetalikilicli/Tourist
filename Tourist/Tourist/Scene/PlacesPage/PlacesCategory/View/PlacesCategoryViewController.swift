@@ -24,10 +24,9 @@ class PlacesCategoryViewController: UIViewController {
         configureCollectionView()
         congigureLocationManager()
         setupViewModel()
-        self.title = "Categories"
-    }
-    override func viewWillAppear(_ animated: Bool) {
         viewModel.fetchPlaceCategories()
+
+        self.title = "Categories"
     }
     
     private func configureCollectionView() {

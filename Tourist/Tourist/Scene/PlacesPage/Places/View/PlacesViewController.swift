@@ -18,15 +18,12 @@ class PlacesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
         //viewModel = PlacesViewModel()
         viewModel.delegate = self
         viewModel.checkPlaces()
         configureUI()
     }
+
     
     @IBAction func showOnMap(_ sender: Any) {
         let checkedPlaces = viewModel.showOnMap()
