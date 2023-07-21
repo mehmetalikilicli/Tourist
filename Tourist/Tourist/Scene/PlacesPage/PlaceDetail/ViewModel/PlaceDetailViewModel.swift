@@ -8,7 +8,8 @@
 import UIKit
 
 protocol PlaceDetailViewModelDelegate: AnyObject {
-    func favoriteAdded()
+    func placeDetailFetched(placeDetail: DetailFeature)
+    func showError(message : String)
 }
 
 class PlaceDetailViewModel {
@@ -25,57 +26,26 @@ class PlaceDetailViewModel {
         PlaceDetailService.shared.getPlaceDetail(placeId: placeId) { [weak self] placeDetail in
             self?.placeDetail = placeDetail
         }
+        delegate?.placeDetailFetched(placeDetail: placeDetail!)
     }
     
     func addFavorite() {
-        
         var place_id = String()
         
         if let placeDetail = placeDetail {
             place_id = (placeDetail.properties?.place_id)!
         }
         
-        
         FavoriteService.shared.addFavoritePlace(placeId: place_id) { [weak self] success in
-            guard let self = self else { return }
-            
             if success {
-                print("Eklendi.")
+                self?.delegate?.showError(message: "\(self?.placeDetail?.properties?.name ?? "Bu yer") başarılı bir şekilde favorilere eklendi.")
             } else {
-                print("Eklenemedi.")
+                self?.delegate?.showError(message: "Bu yer favorilere eklenemedi!")
             }
         }
-        
-        delegate?.favoriteAdded()
     }
     
-    func share() {
-        //Share
-    }
-    
-    func showOnMapButton(navigationController: UINavigationController?) {
-        guard let placeDetail = placeDetail else {
-            showAlert(title: "Hata", message: "Bu yerin konumuna ulaşılamıyor!")
-            return
-        }
-        
-        let placeShowOnMapVC = ShowPlaceOnMapViewController()
-        placeShowOnMapVC.place = placeDetail
-        
-        if let navigationController = navigationController {
-            navigationController.pushViewController(placeShowOnMapVC, animated: true)
-        } else {
-            // Present the view controller modally if there is no navigation controller
-            //present(placeShowOnMapVC, animated: true, completion: nil)
-        }
-    }
-    
-    private func showAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okButton = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alert.addAction(okButton)
-        
-        // Assuming this view controller is presented
-        //present(alert, animated: true, completion: nil)
+    func shareFavorite() {
+        delegate?.showError(message: "\(placeDetail?.properties?.name ?? "Bu yer") başarılı bir şekilde paylaşıldı.")
     }
 }

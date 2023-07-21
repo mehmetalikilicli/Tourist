@@ -21,7 +21,6 @@ class ProfileViewController: UIViewController {
     
     var viewModel = ProfileViewModel()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -36,6 +35,7 @@ class ProfileViewController: UIViewController {
 }
 
 extension ProfileViewController: ProfileViewModelDelegate{
+    
     func userDataFetched(userData: ProfileModel) {
         self.userName.text = userData.name
         self.userEmail.text = userData.email
@@ -47,5 +47,9 @@ extension ProfileViewController: ProfileViewModelDelegate{
         self.ambulanceLabel.text = emergencyCalls.ambulance
         self.policeLabel.text = emergencyCalls.police
         self.fireDepartmentLabel.text = emergencyCalls.fireDepartment
+    }
+    
+    func showError(title: String, message: String) {
+        Alert.makeAlert(viewController: self, title: title, message: message)
     }
 }

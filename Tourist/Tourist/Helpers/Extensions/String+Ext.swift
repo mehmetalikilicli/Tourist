@@ -9,7 +9,7 @@ import Foundation
 
 
 extension String {
-    static func labeForCategory(categories: [String]) -> String? {
+    static func categoryText(categories: [String]) -> String? {
         
         if categories.contains("catering.restaurant") {
             return "Restaurant"

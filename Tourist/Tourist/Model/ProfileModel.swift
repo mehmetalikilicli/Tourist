@@ -13,11 +13,3 @@ struct ProfileModel {
     var phoneNumber: String?
     var email: String?
 }
-
-
-struct EmergencyCalls {
-    
-    var ambulance: String?
-    var police: String?
-    var fireDepartment: String?
-}

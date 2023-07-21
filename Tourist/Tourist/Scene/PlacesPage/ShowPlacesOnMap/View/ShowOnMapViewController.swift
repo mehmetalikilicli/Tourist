@@ -21,7 +21,6 @@ class ShowOnMapViewController: UIViewController, MKMapViewDelegate, CLLocationMa
         
         configuration()
         showPlacesOnMap()
-        
     }
     
     func showPlacesOnMap(){
@@ -45,9 +44,9 @@ class ShowOnMapViewController: UIViewController, MKMapViewDelegate, CLLocationMa
     }
     
     func configuration(){
+        
         mapView.delegate = self
         mapView.showsUserLocation = true
-
         
         locationManager.delegate = self
         //For Best Location Accuracy
@@ -110,5 +109,4 @@ class ShowOnMapViewController: UIViewController, MKMapViewDelegate, CLLocationMa
             }
         }
     }
-
 }

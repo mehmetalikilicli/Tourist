@@ -22,11 +22,13 @@ class PlaceService {
         
         guard let url = URL(string: urlString) else {
             completion(nil)
+            print("Url Hatası!")
             return
         }
         
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard error == nil, let data = data else {
+                print("Veri Çekilemedi!")
                 completion(nil)
                 return
             }

@@ -10,12 +10,13 @@ import CoreLocation
 
 protocol PlaceCategoryViewModelDelegate: AnyObject {
     func placeCategoriesFetched()
-    func didSelectPlaceCategory(_ places: [Feature])
+    func didSelectPlaceCategory(places : [Feature])
+    func showError(title: String, message: String)
 }
 
 
 class PlaceCategoryViewModel {
-    var placeCategoriesList = [PlaceCategory]()
+    private var placeCategoriesList = [PlaceCategory]()
     weak var delegate: PlaceCategoryViewModelDelegate?
     
     func fetchPlaceCategories() {
@@ -31,16 +32,15 @@ class PlaceCategoryViewModel {
         return placeCategoriesList[index]
     }
     
-    func selectPlaceCategory(at index: Int, latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
+    func selectPlaceCategory(index: Int, latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
         let placeCategory = placeCategoriesList[index]
         PlaceService.shared.getPlaces(placeName: placeCategory.name ?? "museum",latitude: latitude, longitude: longitude) { [weak self] placeList in
             DispatchQueue.main.async {
                 guard let placesList = placeList else {
-                    // Yerler çekilemedi, hata durumuyla başa çıkılabilir
+                    self?.delegate?.showError(title: "Hata!", message: "Yerler Veritabanından Getirilemedi!")
                     return
                 }
-                
-                self?.delegate?.didSelectPlaceCategory(placesList)
+                self?.delegate?.didSelectPlaceCategory(places : placesList)
             }
         }
     }
