@@ -9,6 +9,7 @@ import UIKit
 import CoreData
 
 class FavoriteViewController: UIViewController {
+    
     @IBOutlet weak var favoriteTableView: UITableView!
     
     private var viewModel: FavoriteViewModel!
@@ -34,13 +35,6 @@ class FavoriteViewController: UIViewController {
         navigationController?.navigationBar.tintColor = .black
         self.title = "Favorites"
     }
-    
-    func makeAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
-        alert.addAction(okButton)
-        self.present(alert, animated: true, completion: nil)
-    }
 }
 
 extension FavoriteViewController: UITableViewDataSource, UITableViewDelegate {
@@ -50,7 +44,7 @@ extension FavoriteViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteCell") as! FavoriteTableViewCell
-        cell.setUpCell(place: viewModel.favoritePlacesList[indexPath.row])
+            cell.setUpCell(place: viewModel.favoritePlacesList[indexPath.row])
         return cell
     }
     
@@ -61,7 +55,6 @@ extension FavoriteViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         
         let placeId = viewModel.favoritePlacesIdList[indexPath.row]
         PlaceDetailService.shared.getPlaceDetail(placeId: placeId) { [weak self] detailFeature in

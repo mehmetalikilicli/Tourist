@@ -11,13 +11,5 @@ struct ProfileModel {
     var name: String?
     var image: String?
     var phoneNumber: String?
-    var emergencyCalls: EmergencyCalls?
-}
-
-
-struct EmergencyCalls {
-    
-    var ambulance: String?
-    var police: String?
-    var fireDepartment: String?
+    var email: String?
 }

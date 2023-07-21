@@ -13,24 +13,16 @@ protocol PlacesViewModelDelegate: AnyObject {
     func showError(message: String)
 }
 
-protocol PlacesViewModelProtocol {
-    var delegate: PlacesViewModelDelegate? { get set }
-    
-    func checkPlaces()
-    func showOnMap() -> [Feature]
-    func getPlaceDetail(at index: Int)
-    func updateUserCurrentLocation(latitude: CLLocationDegrees, longitude: CLLocationDegrees)
-    
-    var checkedPlacesCount: Int { get }
-    func checkedPlace(at index: Int) -> Feature
-}
-
-class PlacesViewModel: PlacesViewModelProtocol {
+class PlacesViewModel {
     
     weak var delegate: PlacesViewModelDelegate?
     
     private var places = [Feature]()
     private var checkedPlaces = [Feature]()
+    
+    var checkedPlacesCount: Int {
+        return checkedPlaces.count
+    }
     
     init() {
         checkPlaces()
@@ -59,13 +51,9 @@ class PlacesViewModel: PlacesViewModelProtocol {
         delegate?.reloadTableView()
     }
     
-    func showOnMap() -> [Feature]{
-        return checkedPlaces
-    }
-    
-    func getPlaceDetail(at index: Int) {
+    func getPlaceDetail(index : Int) {
         guard let placeId = checkedPlaces[index].properties?.place_id else {
-            delegate?.showError(message: "Place ID not found")
+            delegate?.showError(message: "Place ID bulunamadı!")
             return
         }
         
@@ -73,19 +61,17 @@ class PlacesViewModel: PlacesViewModelProtocol {
             if let detailFeature = detailFeature {
                 self?.delegate?.showPlaceDetail(detailFeature)
             } else {
-                self?.delegate?.showError(message: "Failed to fetch place detail")
+                self?.delegate?.showError(message: "Yer Detayı Veritabanından Getirilemedi!")
             }
         }
     }
     
-    func updateUserCurrentLocation(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
+    func getPlaces() -> [Feature]{
+        return checkedPlaces
     }
     
-    var checkedPlacesCount: Int {
-        return checkedPlaces.count
-    }
-    
-    func checkedPlace(at index: Int) -> Feature {
+    func getPlace(index: Int) -> Feature {
         return checkedPlaces[index]
     }
+    
 }

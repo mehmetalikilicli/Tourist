@@ -29,6 +29,7 @@ class FavoriteViewModel {
     private func getFavoritePlacesDetails() {
         favoritePlacesList.removeAll()
         
+        //For async get placeDetails from service
         let dispatchGroup = DispatchGroup()
         
         for placeId in favoritePlacesIdList {
@@ -45,6 +46,7 @@ class FavoriteViewModel {
                 
                 dispatchGroup.leave()
             }
+            //dispatchGroup.wait()
         }
         
         dispatchGroup.notify(queue: .main) {

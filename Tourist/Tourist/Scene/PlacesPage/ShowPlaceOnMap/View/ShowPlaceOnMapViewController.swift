@@ -9,13 +9,11 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ShowPlaceOnMapViewController: UIViewController, MKMapViewDelegate,  CLLocationManagerDelegate {
-    
+class ShowPlaceOnMapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
     var place : DetailFeature?
-    
     var locationManager = CLLocationManager()
 
     override func viewDidLoad() {
@@ -57,6 +55,10 @@ class ShowPlaceOnMapViewController: UIViewController, MKMapViewDelegate,  CLLoca
         //Start Location
         locationManager.startUpdatingLocation()
     }
+    
+}
+
+extension ShowPlaceOnMapViewController: MKMapViewDelegate,  CLLocationManagerDelegate{
     
     //Custom Pin
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -108,6 +110,4 @@ class ShowPlaceOnMapViewController: UIViewController, MKMapViewDelegate,  CLLoca
             }
         }
     }
-    
-    
 }

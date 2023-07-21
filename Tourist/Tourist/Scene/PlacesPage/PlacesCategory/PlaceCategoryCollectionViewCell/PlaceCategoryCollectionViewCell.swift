@@ -15,12 +15,10 @@ class PlaceCategoryCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
     }
     
-    func configure(with placeCategory: PlaceCategory) {
-           placeCategoryName.text = placeCategory.name
-           placeCategoryImage.image = UIImage(named: placeCategory.image ?? "museum")
+    func configureCell(placeCategory: PlaceCategory) {
+           placeCategoryName.text = placeCategory.name ?? "Unknown"
+           placeCategoryImage.image = UIImage(named: placeCategory.image ?? "tourist")
        }
-
 }

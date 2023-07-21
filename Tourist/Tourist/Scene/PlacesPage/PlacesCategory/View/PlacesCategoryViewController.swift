@@ -8,11 +8,11 @@
 import UIKit
 import CoreLocation
 
-
 class PlacesCategoryViewController: UIViewController {
     
     @IBOutlet weak var placeCollectionView: UICollectionView!
-    var viewModel: PlaceCategoryViewModel!
+    
+    var viewModel = PlaceCategoryViewModel()
     
     //For user current location. This send to viewModel and then service for get user location.
     let locationManager = CLLocationManager()
@@ -23,22 +23,16 @@ class PlacesCategoryViewController: UIViewController {
         super.viewDidLoad()
         configureCollectionView()
         congigureLocationManager()
-        setupViewModel()
-        self.title = "Categories"
-    }
-    override func viewWillAppear(_ animated: Bool) {
+        viewModel.delegate = self
         viewModel.fetchPlaceCategories()
+
+        self.title = "Categories"
     }
     
     private func configureCollectionView() {
         placeCollectionView.dataSource = self
         placeCollectionView.delegate = self
         placeCollectionView.register(UINib(nibName: "PlaceCategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "placeCategoryCell")
-    }
-    
-    private func setupViewModel() {
-        viewModel = PlaceCategoryViewModel()
-        viewModel.delegate = self
     }
     
     private func congigureLocationManager(){
@@ -57,12 +51,9 @@ extension PlacesCategoryViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "placeCategoryCell", for: indexPath) as! PlaceCategoryCollectionViewCell
         let placeCategory = viewModel.placeCategory(at: indexPath.row)
-        cell.placeCategoryName.text = placeCategory.name
-        cell.placeCategoryImage.image = UIImage(named: placeCategory.image ?? "")
+        cell.configureCell(placeCategory: placeCategory)
         return cell
     }
-    
-    
 }
 
 extension PlacesCategoryViewController: UICollectionViewDelegateFlowLayout{
@@ -72,13 +63,14 @@ extension PlacesCategoryViewController: UICollectionViewDelegateFlowLayout{
 }
 
 extension PlacesCategoryViewController: PlaceCategoryViewModelDelegate {
+    
     func placeCategoriesFetched() {
         DispatchQueue.main.async {
             self.placeCollectionView.reloadData()
         }
     }
     
-    func didSelectPlaceCategory(_ places: [Feature]) {
+    func didSelectPlaceCategory(places: [Feature]) {
         DispatchQueue.main.async {
             let placesViewModel = PlacesViewModel(places: places)
             let placesVC = PlacesViewController()
@@ -86,8 +78,15 @@ extension PlacesCategoryViewController: PlaceCategoryViewModelDelegate {
             self.navigationController?.pushViewController(placesVC, animated: true)
         }
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        viewModel.selectPlaceCategory(at: indexPath.row, latitude: currentLatitude, longitude: currentLongitude)
+        viewModel.selectPlaceCategory(index: indexPath.row, latitude: currentLatitude, longitude: currentLongitude)
+    }
+    
+    func showError(title: String, message: String) {
+        DispatchQueue.main.async { [weak self] in
+            Alert.makeAlert(viewController: self!, title: title, message: message)
+        }
     }
 }
 
@@ -101,6 +100,6 @@ extension PlacesCategoryViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error)
+        Alert.makeAlert(viewController: self, title: "Hata!", message: error.localizedDescription)
     }
 }
