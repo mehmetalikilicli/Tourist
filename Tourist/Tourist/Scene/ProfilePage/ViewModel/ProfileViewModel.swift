@@ -31,9 +31,11 @@ class ProfileViewModel {
             else{
                 if snapshot != nil {
                     if let document = snapshot?.documents[0]{
-                        self.userData.name = document.get("userName") as? String
-                        self.userData.phoneNumber = document.get("userPhoneNumber") as? String
-                        self.userData.email = document.get("userEmail") as? String
+                        if (document.get("userId") as? String) == "1" {
+                            self.userData.name = document.get("userName") as? String
+                            self.userData.phoneNumber = document.get("userPhoneNumber") as? String
+                            self.userData.email = document.get("userEmail") as? String
+                        }
                     }
                     self.delegate!.userDataFetched(userData: self.userData)
                 } else {
@@ -53,9 +55,11 @@ class ProfileViewModel {
             else{
                 if snapshot != nil {
                     if let document = snapshot?.documents[0]{
-                        self.emergencyCalls.ambulance = document.get("ambulance") as? String
-                        self.emergencyCalls.police = document.get("police") as? String
-                        self.emergencyCalls.fireDepartment = document.get("fireDepartment") as? String
+                        if (document.get("emergencyCallsId") as? String) == "1" {
+                            self.emergencyCalls.ambulance = document.get("ambulance") as? String
+                            self.emergencyCalls.police = document.get("police") as? String
+                            self.emergencyCalls.fireDepartment = document.get("fireDepartment") as? String
+                        }
                     }
                 } else {
                     self.delegate?.showError(title: "Hata", message: "emergencyCalls verileri getirilemedi!")

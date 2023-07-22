@@ -2,7 +2,7 @@
 //  PlacesViewController.swift
 //  Tourist
 //
-//  Created by Mehmet Ali Kılıçlı on 15.06.2023.
+//  Created by Mehmet Ali Kılıçlı on 25.06.2023.
 //
 
 import UIKit
