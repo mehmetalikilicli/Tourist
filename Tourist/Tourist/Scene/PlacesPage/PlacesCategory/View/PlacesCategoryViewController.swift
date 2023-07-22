@@ -14,19 +14,29 @@ class PlacesCategoryViewController: UIViewController {
     
     var viewModel = PlaceCategoryViewModel()
     
-    //For user current location. This send to viewModel and then service for get user location.
+    //For user current location. This send to viewModel and then service to use user location.
     let locationManager = CLLocationManager()
     var currentLatitude = CLLocationDegrees()
     var currentLongitude = CLLocationDegrees()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        launchedBefore()
         configureCollectionView()
         congigureLocationManager()
         viewModel.delegate = self
         viewModel.fetchPlaceCategories()
-
+        
         self.title = "Categories"
+    }
+    private func launchedBefore(){
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        if !launchedBefore  {
+            
+            Alert.makeAlert(viewController: self, title: "Bilgi", message: Texts.launchedText)
+            
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+        }
     }
     
     private func configureCollectionView() {
@@ -58,8 +68,8 @@ extension PlacesCategoryViewController: UICollectionViewDataSource {
 
 extension PlacesCategoryViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: 144, height: 180)
-        }
+        return CGSize(width: 144, height: 180)
+    }
 }
 
 extension PlacesCategoryViewController: PlaceCategoryViewModelDelegate {
@@ -100,6 +110,6 @@ extension PlacesCategoryViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        Alert.makeAlert(viewController: self, title: "Hata!", message: error.localizedDescription)
+        Alert.makeAlert(viewController: self, title: "Hata!", message:  error.localizedDescription)
     }
 }

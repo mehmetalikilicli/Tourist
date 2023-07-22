@@ -2,7 +2,7 @@
 //  PlaceDetailService.swift
 //  Tourist
 //
-//  Created by Mehmet Ali Kılıçlı on 20.06.2023.
+//  Created by Mehmet Ali Kılıçlı on 30.06.2023.
 //
 
 import Foundation
