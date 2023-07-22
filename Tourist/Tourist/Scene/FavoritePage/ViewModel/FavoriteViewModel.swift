@@ -46,7 +46,7 @@ class FavoriteViewModel {
                 
                 dispatchGroup.leave()
             }
-            //dispatchGroup.wait()
+            dispatchGroup.wait()
         }
         
         dispatchGroup.notify(queue: .main) {
