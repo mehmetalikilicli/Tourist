@@ -14,7 +14,6 @@
 		1736D7452A388E8C003DE43D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1736D7432A388E8C003DE43D /* ProfileViewController.swift */; };
 		1736D7462A388E8C003DE43D /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1736D7442A388E8C003DE43D /* ProfileViewController.xib */; };
 		17449B522A514FCE00737F0E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 17449B512A514FCE00737F0E /* GoogleService-Info.plist */; };
-		17449B562A51588D00737F0E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 17449B552A51588D00737F0E /* FirebaseAuth */; };
 		17449B582A5158A000737F0E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 17449B572A5158A000737F0E /* FirebaseStorage */; };
 		17449B5A2A5158A600737F0E /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 17449B592A5158A600737F0E /* FirebaseDatabase */; };
 		1744A8EB2A6AC216004A14EE /* EmergencyCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1744A8EA2A6AC216004A14EE /* EmergencyCalls.swift */; };
@@ -42,7 +41,6 @@
 		17A8ADC92A69285400CB9123 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A8ADC82A69285400CB9123 /* ProfileViewModel.swift */; };
 		17AD84DE2A5CA55E00B0E877 /* PlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AD84DD2A5CA55E00B0E877 /* PlacesViewModel.swift */; };
 		17BEFCEB2A389DB600430510 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BEFCEA2A389DB600430510 /* Place.swift */; };
-		17BEFCFD2A38A06900430510 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 17BEFCFC2A38A06900430510 /* Alamofire */; };
 		17BEFD022A38BBCC00430510 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BEFD012A38BBCC00430510 /* Urls.swift */; };
 		17C771E82A5FDEC700887451 /* ShowPlaceOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C771E62A5FDEC700887451 /* ShowPlaceOnMapViewController.swift */; };
 		17C771E92A5FDEC700887451 /* ShowPlaceOnMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C771E72A5FDEC700887451 /* ShowPlaceOnMapViewController.xib */; };
@@ -118,8 +116,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17BEFCFD2A38A06900430510 /* Alamofire in Frameworks */,
-				17449B562A51588D00737F0E /* FirebaseAuth in Frameworks */,
 				17449B5A2A5158A600737F0E /* FirebaseDatabase in Frameworks */,
 				17A8ADC62A69169100CB9123 /* FirebaseFirestore in Frameworks */,
 				17449B582A5158A000737F0E /* FirebaseStorage in Frameworks */,
@@ -513,8 +509,6 @@
 			);
 			name = Tourist;
 			packageProductDependencies = (
-				17BEFCFC2A38A06900430510 /* Alamofire */,
-				17449B552A51588D00737F0E /* FirebaseAuth */,
 				17449B572A5158A000737F0E /* FirebaseStorage */,
 				17449B592A5158A600737F0E /* FirebaseDatabase */,
 				17A8ADC52A69169100CB9123 /* FirebaseFirestore */,
@@ -850,11 +844,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		17449B552A51588D00737F0E /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 17449B532A51502E00737F0E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
 		17449B572A5158A000737F0E /* FirebaseStorage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 17449B532A51502E00737F0E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
@@ -869,11 +858,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 17449B532A51502E00737F0E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
-		};
-		17BEFCFC2A38A06900430510 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 17BEFCFB2A38A06800430510 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 

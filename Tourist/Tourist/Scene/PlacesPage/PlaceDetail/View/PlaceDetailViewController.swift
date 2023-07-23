@@ -26,6 +26,16 @@ class PlaceDetailViewController: UIViewController {
         super.viewDidLoad()
         viewModel.delegate = self
         setUpUI()
+        //self.navigationItem.rightBarButtonItem = favoriteButton
+        self.navigationItem.rightBarButtonItem = favoriteButton
+    }
+    
+    
+    
+    let favoriteButton = UIBarButtonItem(image: UIImage(named: "heart")?.withRenderingMode(.alwaysOriginal), style: .plain, target: PlaceDetailViewController.self, action: #selector(addFavoriteButton))
+    
+    @objc func addFavoriteButton(){
+        //viewModel.addFavorite()
     }
     
     @IBAction func addFavorite(_ sender: Any) {
