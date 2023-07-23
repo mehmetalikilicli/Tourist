@@ -22,7 +22,6 @@ class PlacesViewController: UIViewController {
         viewModel.checkPlaces()
         configureUI()
     }
-
     
     @IBAction func showOnMap(_ sender: Any) {
         let places = viewModel.getPlaces()
